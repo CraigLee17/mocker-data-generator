@@ -31,41 +31,42 @@ export class Mocker {
         return this
     }
 
-    build(cb?: ((_: any) => void)): Promise<any>
-    build(cb?: ((_: any) => void)): void
-    build(cb?: ((_: any) => void)): any {
-		let error
-        this.schemas.reduce((acc, schema) => {
-            let instances
-            try {
-                instances = schema.build(acc)
-            } catch (e) {
-				error = new Error(' Schema: "' + schema.name + '" ' + e)
-                console.error(error)
-            }
+    build(cb?: ((error: Error | null , _?: any) => void)): Promise<any>
+    build(cb?: ((error: Error | null , _?: any) => void)): void
+    build(cb?: ((error: Error | null , _?: any) => void)): any {
+        try {
+            this.schemas.reduce((acc, schema) => {
+                let instances
 
-            // Clean virtuals
-            if (schema.virtualPaths.length > 0) {
-                instances.forEach(x =>
-                    cleanVirtuals(schema.virtualPaths, x, {
-                        strict: true,
-                        symbol: ','
-                    })
-                )
-            }
+                try {
+                    instances = schema.build(acc)
+                } catch (e) {
+                    throw new Error('Schema: "' + schema.name + '" ' + e)
+                }
 
-            // Add to db
-            acc[schema.name] = instances
+                // Clean virtuals
+                if (schema.virtualPaths.length > 0) {
+                    instances.forEach(x =>
+                        cleanVirtuals(schema.virtualPaths, x, {
+                            strict: true,
+                            symbol: ','
+                        })
+                    )
+                }
 
-            return acc
-        }, this.DB)
+                // Add to db
+                acc[schema.name] = instances
 
-        if (cb) {
-            return cb(this.DB)
-        } else if(error) {
-			return Promise.reject(error);
-		} else {
-            return Promise.resolve(this.DB)
+                return acc
+            }, this.DB)
+        } catch (e) {
+            return (cb)
+                ? cb(e)
+                : Promise.reject(e)
         }
+
+        return (cb)
+            ? cb(null, this.DB)
+            : Promise.resolve(this.DB)
     }
 }
