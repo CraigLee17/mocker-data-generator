@@ -1,19 +1,14 @@
-# mocker-data-generator
-
-[![NPM](https://nodei.co/npm/mocker-data-generator.png?downloads=true&stars=true)][npm-home-module]
+# mocker-data-generator [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Im%20testing%20mocker-data-generator%20is%20awesome!&via=danibram&url=http://bit.ly/2ziE8qT&hashtags=mock,javascript,developers)
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/danibram/mocker-data-generator.svg)](https://greenkeeper.io/)
 
-[![npm version](https://img.shields.io/npm/v/mocker-data-generator.svg?style=flat-square)][npm-home-module][![GitHub license](https://img.shields.io/npm/dt/mocker-data-generator.svg?style=flat-square)][npm-home-module][![Standard Version](https://img.shields.io/badge/release-standard%20version-brightgreen.svg?style=flat-square)](https://github.com/conventional-changelog/standard-version)
+[![npm version](https://img.shields.io/npm/v/mocker-data-generator.svg?style=flat-square)][npm-home-module][![GitHub license](https://img.shields.io/npm/dt/mocker-data-generator.svg?style=flat-square)][npm-home-module]
 
 [![Linux Build status][travis-badge]][travis-link][![Windows Build status][appveyor-badge]][appveyor-link][![Codecov coverage][codecov-badge]][codecov-link][![Codecov coverage][coveralls-badge]][coveralls-link]
 
 [![Dependency Status](https://img.shields.io/david/danibram/mocker-data-generator.svg?style=flat-square)][npm-home-module][![DevDependency Status](https://img.shields.io/david/dev/danibram/mocker-data-generator.svg?style=flat-square)][npm-home-module]
 
 [![bitHound Overall Score](https://www.bithound.io/github/danibram/mocker-data-generator/badges/score.svg)](https://www.bithound.io/github/danibram/mocker-data-generator)
-[![bitHound Dependencies](https://www.bithound.io/github/danibram/mocker-data-generator/badges/dependencies.svg)](https://www.bithound.io/github/danibram/mocker-data-generator/master/dependencies/npm)
-[![bitHound Dev Dependencies](https://www.bithound.io/github/danibram/mocker-data-generator/badges/devDependencies.svg)](https://www.bithound.io/github/danibram/mocker-data-generator/master/dependencies/npm)
-[![bitHound Code](https://www.bithound.io/github/danibram/mocker-data-generator/badges/code.svg)](https://www.bithound.io/github/danibram/mocker-data-generator)
 
 [![GitHub license](https://img.shields.io/github/license/danibram/mocker-data-generator.svg?style=flat-square)][npm-home-module][![Awesome license](https://img.shields.io/badge/bateries-included-orange.svg?style=flat-square)][npm-home-module]
 
@@ -429,7 +424,7 @@ I couldn't do this without this awesome libraries, so thanks to all:
 - typescript-starter: [[https://github.com/bitjson/typescript-starter](https://github.com/bitjson/typescript-starter)]
 
 ## License
-Licensed under the MIT license. 2015
+Licensed under the MIT license. 2017
 
 [paypal-badge]: https://img.shields.io/badge/❤%20support-paypal-blue.svg?style=flat-square
 [paypal-link]: https://www.paypal.me/danibram
